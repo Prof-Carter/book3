@@ -12,7 +12,7 @@ y = initial(sysP,x0,t);
 y1 = y(:,1);
 y2 = y(:,2);
 
-figure(1); plot_data2
+figure(1); plot_data2_custom
 
 % 単位ステップ応答
 y = step(sysP,t);
@@ -23,7 +23,7 @@ y12 = y(:,1,2);  y22 = y(:,2,2);
 y1 = y11 + y12;
 y2 = y21 + y22;
 
-figure(2); plot_data2
+figure(2); plot_data2_custom
 
 % -----
 figure(1)
