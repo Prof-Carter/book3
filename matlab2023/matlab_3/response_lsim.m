@@ -11,5 +11,7 @@ y = lsim(sysP,u,t,x0);
 plot_data
 
 % ----
+xlim([0 5])
 ylim([-0.1 0.2])
+set(gca,'XTick',0:1:5)
 set(gca,'YTick',-0.1:0.1:0.2)
