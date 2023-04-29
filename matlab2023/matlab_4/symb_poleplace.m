@@ -17,7 +17,7 @@ eq2 = (lambda - p1)*(lambda - p2);
 eq2 = collect(eq2,lambda)
 coe2 = coeffs(eq2,lambda)
 
-[k1 k2] = solve(coe1(1)-coe2(1), coe1(2)-coe2(2), {k1,k2})  % C³
+[k1 k2] = solve(coe1(1)-coe2(1), coe1(2)-coe2(2), {k1,k2})  % ä¿®æ­£
 
 K = subs([k1 k2],{p1,p2},{-8+4j,-8-4j})
 eig(A + B*K)

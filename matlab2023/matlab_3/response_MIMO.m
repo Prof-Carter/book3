@@ -5,7 +5,7 @@ plant2
 t = 0:0.01:20;
 % t = linspace(0,20,2001);
 
-% —ë“ü—Í‰“š
+% é›¶å…¥åŠ›å¿œç­”
 x0 = [ 1; 0; -1; 0 ];
 
 y = initial(sysP,x0,t);
@@ -15,7 +15,7 @@ y2 = y(:,2);
 figure(1); plot_data2
 % figure(1); plot_data2_custom
 
-% ’PˆÊƒXƒeƒbƒv‰“š
+% å˜ä½ã‚¹ãƒ†ãƒƒãƒ—å¿œç­”
 y = step(sysP,t);
 
 y11 = y(:,1,1);  y21 = y(:,2,1);
