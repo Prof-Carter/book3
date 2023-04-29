@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('ñ‚ëË 6.3 (1)ÅiSimulink Ç…ÇÊÇÈÉVÉ~ÉÖÉåÅ[ÉVÉáÉìÅj')
+disp('ÂïèÈ°å 6.3 (1)ÔºàSimulink „Å´„Çà„Çã„Ç∑„Éü„É•„É¨„Éº„Ç∑„Éß„É≥Ôºâ')
 disp('++++++++++++++++++++++++++++++')
 
 close all
@@ -22,9 +22,9 @@ l = [ -6
       -8 ];
 
 tf = 1;
-sim('eg_6_04_1_R2018a',tf);  % R2018a à»ç~
-% sim('eg_6_04_1_R2020a',tf);  % R2020a à»ç~
-% sim('eg_6_04_1_R2023a',tf);  % R2023a à»ç~
+sim('eg_6_04_1_R2018a',tf);  % R2018a ‰ª•Èôç
+% sim('eg_6_04_1_R2020a',tf);  % R2020a ‰ª•Èôç
+% sim('eg_6_04_1_R2023a',tf);  % R2023a ‰ª•Èôç
 
 figure(1)
 set(gcf,'position',[50 50 1200 750])
@@ -43,9 +43,9 @@ l = [ -22
       -40 ];
 
 tf = 1;
-sim('eg_6_04_1_R2018a',tf);  % R2018a à»ç~
-% sim('eg_6_04_1_R2020a',tf);  % R2020a à»ç~
-% sim('eg_6_04_1_R2023a',tf);  % R2023a à»ç~
+sim('eg_6_04_1_R2018a',tf);  % R2018a ‰ª•Èôç
+% sim('eg_6_04_1_R2020a',tf);  % R2020a ‰ª•Èôç
+% sim('eg_6_04_1_R2023a',tf);  % R2023a ‰ª•Èôç
 
 % -----
 subplot(2,2,2)
@@ -93,7 +93,7 @@ for i = 1:2
 end
 
 subplot(2,2,1)
-title('- 8 \pm 2j Ç…îzíu','FontName','MS UI Gothic','FontSize',16)
+title('- 8 \pm 2j „Å´ÈÖçÁΩÆ','FontName','MS UI Gothic','FontSize',16)
 
 subplot(2,2,2)
-title('- 16 \pm 2j Ç…îzíu','FontName','MS UI Gothic','FontSize',16)
+title('- 16 \pm 2j „Å´ÈÖçÁΩÆ','FontName','MS UI Gothic','FontSize',16)

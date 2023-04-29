@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('–â‘è 6.3 (2)i’¼Ú“I‚È•û–@F”®ˆ—j')
+disp('å•é¡Œ 6.3 (2)ï¼ˆç›´æ¥çš„ãªæ–¹æ³•ï¼šæ•°å¼å‡¦ç†ï¼‰')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -17,7 +17,7 @@ l = [ l1
       l2 ];
 
 disp(' ')
-disp('--- ‰ÂŠÏ‘ªs—ñ Vo ---------')
+disp('--- å¯è¦³æ¸¬è¡Œåˆ— Vo ---------')
 Vo = obsv(A,c)
 
 disp(' ')
@@ -25,31 +25,31 @@ disp('--- |Vo| ---------')
 det_Vo = det(Vo)
 
 if det_Vo ~= 0
-    disp('‰ÂŠÏ‘ª‚Å‚ ‚é')
+    disp('å¯è¦³æ¸¬ã§ã‚ã‚‹')
 else
-    disp('‰ÂŠÏ‘ª‚Å‚Í‚È‚¢')
+    disp('å¯è¦³æ¸¬ã§ã¯ãªã„')
 end
 
 disp(' ')
-disp('--- A + l*c ‚Ì“Á«‘½€® ---------')
+disp('--- A + l*c ã®ç‰¹æ€§å¤šé …å¼ ---------')
 det_A_lc = det(s*eye(2) - (A + l*c));
 det_A_lc = collect(det_A_lc,s)
 
 disp(' ')
-disp('---  A + l*c ‚Ì“Á«‘½€®FƒÉ^2 + a1*ƒÉ + a0 ---------')
+disp('---  A + l*c ã®ç‰¹æ€§å¤šé …å¼ï¼šÎ»^2 + a1*Î» + a0 ---------')
 a0 = subs(diff(det_A_lc, s, 0), s, 0)/factorial(0)
 a1 = subs(diff(det_A_lc, s, 1), s, 0)/factorial(1)
 
 
 disp(' ')
-disp('--- ”z’u‚µ‚½‚¢ŒÅ—L’l‚Ìİ’è ---------')
+disp('--- é…ç½®ã—ãŸã„å›ºæœ‰å€¤ã®è¨­å®š ---------')
 syms p1 p2
 
 p = [ p1
       p2 ]
 
 disp(' ')
-disp('--- ƒ¢(ƒÉ) = ƒÉ^2 + d1*ƒÉ + d0  ---------')
+disp('--- Î”(Î») = Î»^2 + d1*Î» + d0  ---------')
 delta = (s - p(1))*(s - p(2))
 delta = collect(delta)
 
@@ -57,7 +57,7 @@ d0 = subs(diff(delta, s, 0), s, 0)/factorial(0)
 d1 = subs(diff(delta, s, 1), s, 0)/factorial(1)
 
 disp(' ')
-disp('--- ƒIƒuƒU[ƒoƒQƒCƒ“ l = [ l1')
+disp('--- ã‚ªãƒ–ã‚¶ãƒ¼ãƒã‚²ã‚¤ãƒ³ l = [ l1')
 disp('                          l2 ] ---------')
 [l1 l2] = solve(a1==d1, a0==d0, {l1, l2})
 

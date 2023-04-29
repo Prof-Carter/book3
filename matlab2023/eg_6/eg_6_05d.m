@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 6.5iƒpƒ‰ƒ[ƒ^•Ï“®‚ğ¶‚¶‚½ê‡‚ÌƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“Œ‹‰Êj')
+disp('ä¾‹ 6.5ï¼ˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿å¤‰å‹•ã‚’ç”Ÿã˜ãŸå ´åˆã®ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³çµæœï¼‰')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -60,9 +60,9 @@ Bv = [  0
         0  ];
 
 tf = 15;
-sim('eg_6_05_R2018a',tf)    % R2018a ˆÈ~
-% sim('eg_6_05_R2020a',tf)    % R2020a ˆÈ~
-% sim('eg_6_05_R2023a',tf)    % R2023a ˆÈ~
+sim('eg_6_05_R2018a',tf)    % R2018a ä»¥é™
+% sim('eg_6_05_R2020a',tf)    % R2020a ä»¥é™
+% sim('eg_6_05_R2023a',tf)    % R2023a ä»¥é™
 
 figure(1)
 subplot(2,1,1)
@@ -84,9 +84,9 @@ Bv = [  0
         0  ];
 
 tf = 15;
-sim('eg_6_05_R2018a',tf)    % R2018a ˆÈ~
-% sim('eg_6_05_R2018a',tf)    % R2020a ˆÈ~
-% sim('eg_6_05_R2023a',tf)    % R2023a ˆÈ~
+sim('eg_6_05_R2018a',tf)    % R2018a ä»¥é™
+% sim('eg_6_05_R2018a',tf)    % R2020a ä»¥é™
+% sim('eg_6_05_R2023a',tf)    % R2023a ä»¥é™
 
 figure(1)
 subplot(2,1,2)
@@ -111,7 +111,7 @@ for i = 1:2
     xlabel('t [s]','FontName','Arial','FontSize',16)
     ylabel('y(t) [m]','FontName','Arial','FontSize',16)
 
-    legend({'–Ú•W’l','o—ÍƒtƒB[ƒhƒoƒbƒN','ó‘ÔƒtƒB[ƒhƒoƒbƒN'},'Location','southeast')
+    legend({'ç›®æ¨™å€¤','å‡ºåŠ›ãƒ•ã‚£ãƒ¼ãƒ‰ãƒãƒƒã‚¯','çŠ¶æ…‹ãƒ•ã‚£ãƒ¼ãƒ‰ãƒãƒƒã‚¯'},'Location','southeast')
     set(legend,'FontName','MS UI Gothic','FontSize',13)
 end
 

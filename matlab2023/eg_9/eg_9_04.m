@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 9.4')
+disp('ä¾‹ 9.4')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -18,14 +18,14 @@ B = [  0
       1/J ];
   
 % ----------
-ep = 1e-5;              % \•ª¬‚³‚È³” <--- ‰Á•M
+ep = 1e-5;              % ååˆ†å°ã•ãªæ­£æ•° <--- åŠ ç­†
 
 % ----------
 n = 2;  p = 1;
-X = sdpvar(n,n,'sy');   % X Fn~n ‚Ì‘ÎÌs—ñ
-F = sdpvar(p,n,'f');    % F Fm~n ‚Ìs—ñ
-Z = sdpvar(n,n,'sy');   % Z Fn~n ‚Ì‘ÎÌs—ñ
-LMI = [];               % LMI ‚Ì‰Šú‰»
+X = sdpvar(n,n,'sy');   % X ï¼šnÃ—n ã®å¯¾ç§°è¡Œåˆ—
+F = sdpvar(p,n,'f');    % F ï¼šmÃ—n ã®è¡Œåˆ—
+Z = sdpvar(n,n,'sy');   % Z ï¼šnÃ—n ã®å¯¾ç§°è¡Œåˆ—
+LMI = [];               % LMI ã®åˆæœŸåŒ–
 
 % ----------
 M = A*X + B*F;
@@ -33,7 +33,7 @@ M = A*X + B*F;
 % ----------
 Qh = diag([sqrt(10) 0]);
 R  = 1;
-% ***** ˆÈ‘O‚Ì‹Lq•û–@ *****
+% ***** ä»¥å‰ã®è¨˜è¿°æ–¹æ³• *****
 % M_LQ1 = [-(M+M')    X*Qh        F'*R
 %           Qh*X     eye(n)    zeros(n,p)
 %            R*F   zeros(p,n)      R     ];
@@ -41,31 +41,31 @@ R  = 1;
 % M_LQ2 = [   Z     eye(n)
 %           eye(n)    X   ];
 % LMI = [LMI, M_LQ2 > 0];
-% ***** Å‹ß‚Ì‹Lq•û–@ *****
+% ***** æœ€è¿‘ã®è¨˜è¿°æ–¹æ³• *****
 M_LQ1 = [-(M+M')    X*Qh        F'*R
           Qh*X     eye(n)    zeros(n,p)
            R*F   zeros(p,n)      R     ];
-LMI = [LMI, M_LQ1 >= ep*eye(length(M_LQ1))];    % M_LQ1 † ep*I (> 0)
+LMI = [LMI, M_LQ1 >= ep*eye(length(M_LQ1))];    % M_LQ1 â‰§ ep*I (> 0)
 M_LQ2 = [   Z     eye(n)
           eye(n)    X   ];
-LMI = [LMI, M_LQ2 >= ep*eye(length(M_LQ2))];    % M_LQ2 † ep*I (> 0)
+LMI = [LMI, M_LQ2 >= ep*eye(length(M_LQ2))];    % M_LQ2 â‰§ ep*I (> 0)
 
 % ----------
-solvesdp(LMI,trace(Z))   % SeDuMi ‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚éê‡‚Í•W€‚Å SeDuMi ‚ª‘I‘ğ‚³‚ê‚é
+solvesdp(LMI,trace(Z))   % SeDuMi ãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã‚‹å ´åˆã¯æ¨™æº–ã§ SeDuMi ãŒé¸æŠã•ã‚Œã‚‹
 % solvesdp(LMI,trace(Z),sdpsettings('solver','sedumi'))     % https://github.com/sqlp/sedumi/archive/refs/heads/master.zip
 % solvesdp(LMI,trace(Z),sdpsettings('solver','sdpt3'))      % https://github.com/sqlp/sdpt3/archive/refs/heads/master.zip
 % solvesdp(LMI,trace(Z),sdpsettings('solver','sdpa'))       % https://sourceforge.net/projects/sdpa/files/sdpa/windows/sdpam-7.3.9-windows.zip
-% solvesdp(LMI,trace(Z),sdpsettings('solver','lmilab'))     % Robust Control Toolbox ‚É•ïŠÜ
+% solvesdp(LMI,trace(Z),sdpsettings('solver','lmilab'))     % Robust Control Toolbox ã«åŒ…å«
 
 format short e
 
 disp(' ')
-disp('--- LMI ‚Ì‰ğ X = X'' > 0, F ---------')
+disp('--- LMI ã®è§£ X = X'' > 0, F ---------')
 X_opt = double(X)
 F_opt = double(F)
 
 disp(' ')
-disp('--- ƒRƒ“ƒgƒ[ƒ‰‚ÌƒQƒCƒ“ K ---------')
+disp('--- ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã®ã‚²ã‚¤ãƒ³ K ---------')
 K_opt = F_opt*inv(X_opt)
 
 disp(' ')
@@ -75,15 +75,15 @@ double(trace(Z))
 disp(' ')
 disp('_____________________________________________________________')
 disp(' ')
-disp('--- Å“KƒŒƒMƒ…ƒŒ[ƒ^‚É‚¨‚¯‚éƒŠƒJƒbƒ`•û’ö®‚Ì‰ğ P ---------')
+disp('--- æœ€é©ãƒ¬ã‚®ãƒ¥ãƒ¬ãƒ¼ã‚¿ã«ãŠã‘ã‚‹ãƒªã‚«ãƒƒãƒæ–¹ç¨‹å¼ã®è§£ P ---------')
 Q = Qh'*Qh;
 P = care(A,B,Q,R)
 
-disp('--- P ‚Ì‹ts—ñ ---------')
+disp('--- P ã®é€†è¡Œåˆ— ---------')
 inv(P)
 
 disp(' ')
-disp('--- Å“KƒŒƒMƒ…ƒŒ[ƒ^‚É‚æ‚éƒRƒ“ƒgƒ[ƒ‰‚ÌƒQƒCƒ“ K ---------')
+disp('--- æœ€é©ãƒ¬ã‚®ãƒ¥ãƒ¬ãƒ¼ã‚¿ã«ã‚ˆã‚‹ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã®ã‚²ã‚¤ãƒ³ K ---------')
 K_LQ = - inv(R)*B'*P
 
 format short

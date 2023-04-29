@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 8.2 (1)i‚Â‚Ã‚«FƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“Œ‹‰Ê‚Ì•`‰æj')
+disp('ä¾‹ 8.2 (1)ï¼ˆã¤ã¥ãï¼šã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³çµæœã®æç”»ï¼‰')
 disp('++++++++++++++++++++++++++++++')
 
 close all
@@ -68,7 +68,7 @@ set(gca,'FontName','Arial','FontSize',20)
 xlabel('t [s]','FontName','Arial','FontSize',22)
 ylabel('x1(t) [m]','FontName','Arial','FontSize',22)
 
-legend('LQ','‹É”z’u')
+legend('LQ','æ¥µé…ç½®')
 set(legend,'FontName','MS UI Gothic','FontSize',20)
 
 % -----------------------------------------

@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('ó· 9.1')
+disp('‰æã 9.1')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -10,40 +10,40 @@ A = [   0  1
       -10 -1 ];
   
 % ----------
-ep = 1e-5;              % è\ï™è¨Ç≥Ç»ê≥êî <--- â¡ïM
+ep = 1e-5;              % ÂçÅÂàÜÂ∞è„Åï„Å™Ê≠£Êï∞ <--- Âä†Á≠Ü
 
 % ----------
 n = 2;
-P = sdpvar(n,n,'sy');   % P ÅFnÅ~n ÇÃëŒèÃçsóÒ
-LMI = [];               % LMI ÇÃèâä˙âª
-% ***** à»ëOÇÃãLèqï˚ñ@ *****
-% LMI = [LMI, P > eye(2)];        % P > 0 Ç∆Ç∑ÇÈÇ∆ÅCïsà¿íËçsóÒ A Ç…ëŒÇµÇƒåÎîªíËÅFP > I
-% LMI = [LMI, P*A + A'*P < 0];    % ÉäÉAÉvÉmÉtïsìôéÆ         % LMI ÇÃèâä˙âªÅFP*A + A'*P < 0
-% ***** ç≈ãﬂÇÃãLèqï˚ñ@ *****
-LMI = [LMI, P - eye(2) >= ep*eye(2)];	% P > 0 Ç∆Ç∑ÇÈÇ∆ÅCïsà¿íËçsóÒ A Ç…ëŒÇµÇƒåÎîªíËÅFP - I ÅÜ ep*I (> 0)
-LMI = [LMI, P*A + A'*P <= -ep*eye(2)];	% ÉäÉAÉvÉmÉtïsìôéÆÅFP*A + A'*P ÅÖ -ep*I (< 0)
+P = sdpvar(n,n,'sy');   % P Ôºön√ón „ÅÆÂØæÁß∞Ë°åÂàó
+LMI = [];               % LMI „ÅÆÂàùÊúüÂåñ
+% ***** ‰ª•Ââç„ÅÆË®òËø∞ÊñπÊ≥ï *****
+% LMI = [LMI, P > eye(2)];        % P > 0 „Å®„Åô„Çã„Å®Ôºå‰∏çÂÆâÂÆöË°åÂàó A „Å´ÂØæ„Åó„Å¶Ë™§Âà§ÂÆöÔºöP > I
+% LMI = [LMI, P*A + A'*P < 0];    % „É™„Ç¢„Éó„Éé„Éï‰∏çÁ≠âÂºè         % LMI „ÅÆÂàùÊúüÂåñÔºöP*A + A'*P < 0
+% ***** ÊúÄËøë„ÅÆË®òËø∞ÊñπÊ≥ï *****
+LMI = [LMI, P - eye(2) >= ep*eye(2)];	% P > 0 „Å®„Åô„Çã„Å®Ôºå‰∏çÂÆâÂÆöË°åÂàó A „Å´ÂØæ„Åó„Å¶Ë™§Âà§ÂÆöÔºöP - I ‚âß ep*I (> 0)
+LMI = [LMI, P*A + A'*P <= -ep*eye(2)];	% „É™„Ç¢„Éó„Éé„Éï‰∏çÁ≠âÂºèÔºöP*A + A'*P ‚â¶ -ep*I (< 0)
 
 % ----------
-solvesdp(LMI)   % SeDuMi Ç™ÉCÉìÉXÉgÅ[ÉãÇ≥ÇÍÇƒÇ¢ÇÈèÍçáÇÕïWèÄÇ≈ SeDuMi Ç™ëIëÇ≥ÇÍÇÈ
+solvesdp(LMI)   % SeDuMi „Åå„Ç§„É≥„Çπ„Éà„Éº„É´„Åï„Çå„Å¶„ÅÑ„ÇãÂ†¥Âêà„ÅØÊ®ôÊ∫ñ„Åß SeDuMi „ÅåÈÅ∏Êäû„Åï„Çå„Çã
 % solvesdp(LMI,[],sdpsettings('solver','sedumi'))     % https://github.com/sqlp/sedumi/archive/refs/heads/master.zip
 % solvesdp(LMI,[],sdpsettings('solver','sdpt3'))      % https://github.com/sqlp/sdpt3/archive/refs/heads/master.zip
 % solvesdp(LMI,[],sdpsettings('solver','sdpa'))       % https://sourceforge.net/projects/sdpa/files/sdpa/windows/sdpam-7.3.9-windows.zip
-% solvesdp(LMI,[],sdpsettings('solver','lmilab'))     % Robust Control Toolbox Ç…ïÔä‹
+% solvesdp(LMI,[],sdpsettings('solver','lmilab'))     % Robust Control Toolbox „Å´ÂåÖÂê´
 
 % ----------
 format short e
 
 disp(' ')
-disp('--- ÉäÉAÉvÉmÉtïsìôéÆ M = P*A + A''*P < 0 ÇÃê≥íËëŒèÃâ P ---------')
+disp('--- „É™„Ç¢„Éó„Éé„Éï‰∏çÁ≠âÂºè M = P*A + A''*P < 0 „ÅÆÊ≠£ÂÆöÂØæÁß∞Ëß£ P ---------')
 P_feas = double(P)
 
 format short
 
 % ----------
 disp(' ')
-disp('--- P ÇÃå≈óLíl ---------')
+disp('--- P „ÅÆÂõ∫ÊúâÂÄ§ ---------')
 eig(double(P))
 
 disp(' ')
-disp('--- -M ÇÃå≈óLíl ---------')
+disp('--- -M „ÅÆÂõ∫ÊúâÂÄ§ ---------')
 eig(double(-(P*A + A'*P)))

@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 9.2')
+disp('ä¾‹ 9.2')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -18,49 +18,49 @@ B = [  0
       1/J ]
 
 % ------------------------------------------
-ep = 1e-5;              % \•ª¬‚³‚È³” <--- ‰Á•M
+ep = 1e-5;              % ååˆ†å°ã•ãªæ­£æ•° <--- åŠ ç­†
 
 % ------------------------------------------
 n = 2;
 p = 1;
-X = sdpvar(n,n,'sy');   % X Fn~n ‚Ì‘ÎÌs—ñ
-F = sdpvar(p,n,'f');    % F Fm~n ‚Ìs—ñ
-LMI = [];               % LMI ‚Ì‰Šú‰»
+X = sdpvar(n,n,'sy');   % X ï¼šnÃ—n ã®å¯¾ç§°è¡Œåˆ—
+F = sdpvar(p,n,'f');    % F ï¼šmÃ—n ã®è¡Œåˆ—
+LMI = [];               % LMI ã®åˆæœŸåŒ–
 
-% ***** ˆÈ‘O‚Ì‹Lq•û–@ *****
+% ***** ä»¥å‰ã®è¨˜è¿°æ–¹æ³• *****
 % % ------------------------------------------
 % LMI = [LMI, X > 0];
 % % ------------------------------------------
 % M = A*X + B*F;
 % LMI = [LMI, M + M' < 0];
 
-% ***** Å‹ß‚Ì‹Lq•û–@ *****
+% ***** æœ€è¿‘ã®è¨˜è¿°æ–¹æ³• *****
 % ------------------------------------------
-LMI = [LMI, X >= ep*eye(length(X))];        % X † ep*I > 0
+LMI = [LMI, X >= ep*eye(length(X))];        % X â‰§ ep*I > 0
 
 % ------------------------------------------
 M = A*X + B*F;
-LMI = [LMI, M + M' <= -ep*eye(length(M))];  % M + M' … -ep*I (< 0)
+LMI = [LMI, M + M' <= -ep*eye(length(M))];  % M + M' â‰¦ -ep*I (< 0)
 
 % ------------------------------------------
-solvesdp(LMI)   % SeDuMi ‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚éê‡‚Í•W€‚Å SeDuMi ‚ª‘I‘ğ‚³‚ê‚é
+solvesdp(LMI)   % SeDuMi ãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã‚‹å ´åˆã¯æ¨™æº–ã§ SeDuMi ãŒé¸æŠã•ã‚Œã‚‹
 % solvesdp(LMI,[],sdpsettings('solver','sedumi'))     % https://github.com/sqlp/sedumi/archive/refs/heads/master.zip
 % solvesdp(LMI,[],sdpsettings('solver','sdpt3'))      % https://github.com/sqlp/sdpt3/archive/refs/heads/master.zip
 % solvesdp(LMI,[],sdpsettings('solver','sdpa'))       % https://sourceforge.net/projects/sdpa/files/sdpa/windows/sdpam-7.3.9-windows.zip
-% solvesdp(LMI,[],sdpsettings('solver','lmilab'))     % Robust Control Toolbox ‚É•ïŠÜ
+% solvesdp(LMI,[],sdpsettings('solver','lmilab'))     % Robust Control Toolbox ã«åŒ…å«
 
 format short e
 
 disp(' ')
-disp('--- ƒŠƒAƒvƒmƒt•s“™® He[A*X + B*F] < 0 ‚Ì X = X'' > 0, F ---------')
+disp('--- ãƒªã‚¢ãƒ—ãƒãƒ•ä¸ç­‰å¼ He[A*X + B*F] < 0 ã® X = X'' > 0, F ---------')
 X_feas = double(X)
 F_feas = double(F)
 disp(' ')
-disp('--- ƒRƒ“ƒgƒ[ƒ‰‚ÌƒQƒCƒ“ K ---------')
+disp('--- ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã®ã‚²ã‚¤ãƒ³ K ---------')
 K_feas = F_feas*inv(X_feas)
 
 disp(' ')
-disp('--- A + B*K ‚ÌŒÅ—L’l ---------')
+disp('--- A + B*K ã®å›ºæœ‰å€¤ ---------')
 eig(A + B*K_feas)
 
 format short

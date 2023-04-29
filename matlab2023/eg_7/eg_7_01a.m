@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 7.1')
+disp('ä¾‹ 7.1')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -17,11 +17,11 @@ dx = [ x2
       -(M*g*l/J)*sin(x1)-mu/J*x2 ]
 
 disp(' ')
-disp('--- ƒÓ(x(t)) ---------')
+disp('--- Ï†(x(t)) ---------')
 phi = (1/2)*J*x2^2 + M*g*l*(1 - cos(x1))
 
 disp(' ')
-disp('--- dƒÓ(x(t))/dt ---------')
+disp('--- dÏ†(x(t))/dt ---------')
 dphi = diff(phi,x1)*dx1 + diff(phi,x2)*dx2
 dphi = subs(dphi,{dx1,dx2},{dx(1),dx(2)});
 dphi = simplify(dphi)
