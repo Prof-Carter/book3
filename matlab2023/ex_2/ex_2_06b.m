@@ -1,13 +1,13 @@
 disp('++++++++++++++++++++++++++++++')
-disp('–â‘è 2.6 (1)')
-disp('i©ì‚ÌŠÖ” ''ctrb_ss'', ''obsv_ss'' ‚ğ—˜—p')
+disp('å•é¡Œ 2.6 (1)')
+disp('ï¼ˆè‡ªä½œã®é–¢æ•° ''ctrb_ss'', ''obsv_ss'' ã‚’åˆ©ç”¨')
 disp('++++++++++++++++++++++++++++++')
 
 clear
 format compact
 
 disp(' ')
-disp('--- “`’BŠÖ”•\Œ» y(s) = P(s)*u(s) ------')
+disp('--- ä¼é”é–¢æ•°è¡¨ç¾ y(s) = P(s)*u(s) ------')
 num_P = 1;
 den_P = [1 2 3];
 tf_P  = tf(num_P,den_P)
@@ -18,15 +18,15 @@ tf_P  = tf(num_P,den_P)
 
 disp(' ')
 disp('++++++++++++++++++++++++++++++')
-disp('–â‘è 2.6 (2)')
-disp('i©ì‚ÌŠÖ” ''ctrb_ss'', ''obsv_ss'' ‚ğ—˜—p')
+disp('å•é¡Œ 2.6 (2)')
+disp('ï¼ˆè‡ªä½œã®é–¢æ•° ''ctrb_ss'', ''obsv_ss'' ã‚’åˆ©ç”¨')
 disp('++++++++++++++++++++++++++++++')
 
 clear
 format compact
 
 disp(' ')
-disp('--- “`’BŠÖ”•\Œ» y(s) = P(s)*u(s) ------')
+disp('--- ä¼é”é–¢æ•°è¡¨ç¾ y(s) = P(s)*u(s) ------')
 num_P = 4*[1 2];
 den_P = [1 3 4 2];
 tf_P  = tf(num_P,den_P)

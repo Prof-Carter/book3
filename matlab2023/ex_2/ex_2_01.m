@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('–â‘è 2.1')
+disp('å•é¡Œ 2.1')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -12,7 +12,7 @@ syms x1 x2 dx2 real
 dx1 = x2;
 
 disp(' ')
-disp('--- ‰^“®•û’öŽ® ------')
+disp('--- é‹å‹•æ–¹ç¨‹å¼ ------')
 eq = M*ddy == u - k*y - mu*dy    % ---> M*ddy = u - k*y - mu*dy
 eq = subs(eq,  y, x1);
 eq = subs(eq, dy, x2);

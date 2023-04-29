@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('–â‘è 7.4 (3)')
+disp('å•é¡Œ 7.4 (3)')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -24,15 +24,15 @@ Q = Qo'*Qo
 P = lyap(A',Q)
 
 disp(' ')
-disp('--- ƒÓ(x(t)) ---------')
+disp('--- Ï†(x(t)) ---------')
 phi = x'*P*x
 
 disp(' ')
-disp('--- dƒÓ(x(t))/dt ---------')
-% ‡¬ŠÖ”‚Ì”÷•ª dƒÓ(x(t))/dt = İƒÓ(x(t))İx1(t)*dx1(t)/dt + İƒÓ(x(t))İx2(t)*dx2(t)/dt
+disp('--- dÏ†(x(t))/dt ---------')
+% åˆæˆé–¢æ•°ã®å¾®åˆ† dÏ†(x(t))/dt = âˆ‚Ï†(x(t))âˆ‚x1(t)*dx1(t)/dt + âˆ‚Ï†(x(t))âˆ‚x2(t)*dx2(t)/dt
 dphi = diff(phi,x1)*dx1 + diff(phi,x2)*dx2; 
 
-% ã‚ÅŒvZ‚µ‚½ dx(t)/dt = A*x(t) ‚ğ‘ã“ü
+% ä¸Šã§è¨ˆç®—ã—ãŸ dx(t)/dt = A*x(t) ã‚’ä»£å…¥
 dphi = subs(dphi,{dx1,dx2},{dx(1),dx(2)});
 dphi = simplify(dphi)
 
@@ -40,21 +40,21 @@ dphi = simplify(dphi)
 syms s
 
 disp(' ')
-disp('--- ‘JˆÚs—ñ ---------')
+disp('--- é·ç§»è¡Œåˆ— ---------')
 exp_At = ilaplace(inv(s*eye(2) - A))
 
 disp(' ')
 disp('--- x0 = [ 1')
-disp('           0 ] ‚Æ‚µ‚½‚Ì x(t) ---------')
+disp('           0 ] ã¨ã—ãŸæ™‚ã® x(t) ---------')
 xt = exp_At*x0
 
 disp(' ')
-disp('--- ƒÓ(t) ---------')
+disp('--- Ï†(t) ---------')
 phit = subs(phi,{x1,x2},{xt(1),xt(2)});
 phit = simplify(phit)
 
 disp(' ')
-disp('--- dƒÓ(t)/dt ---------')
+disp('--- dÏ†(t)/dt ---------')
 dphit = subs(dphi,{x1,x2},{xt(1),xt(2)});
 dphit = simplify(dphit)
 

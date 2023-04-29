@@ -1,8 +1,8 @@
 function [Ao,bo,co] = obsv_ss(num_P,den_P)
-% �`�B�֐��\�������ԋ�ԕ\���i�ϑ��W���`�j�ւ̕ϊ�
+% 伝達関数表現から状態空間表現（可観測標準形）への変換
 
 disp(' ')
-disp('--- ��ԋ�ԕ\���i�ϑ��W���`�j     ------')
+disp('--- 状態空間表現（可観測標準形）     ------')
 disp('--- dxo(t)/dt = Ao*xo(t) + bo*u(t) ------')
 disp('---   y(t)    = co*xo(t)           ------')
 

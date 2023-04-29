@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('��� 7.4 (1)')
+disp('問題 7.4 (1)')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -13,7 +13,7 @@ disp('--- Qo ---------')
 Qo = [ 1  0 ]
 
 disp(' ')
-disp('--- �ϑ��s�� Vo ---------')
+disp('--- 可観測行列 Vo ---------')
 Vo = obsv(A,Qo)
 
 disp(' ')
@@ -21,38 +21,38 @@ disp('--- |Vo| ---------')
 det_Vo = det(Vo)
 
 if det_Vo ~= 0
-    disp('(Qo, A) �͉ϑ��ł���')
+    disp('(Qo, A) は可観測である')
 else
-    disp('(Qo, A) �͉ϑ��ł͂Ȃ�')
+    disp('(Qo, A) は可観測ではない')
 end
 
 
 disp(' ')
 disp('++++++++++++++++++++++++++++++')
-disp('��� 7.4 (2)')
+disp('問題 7.4 (2)')
 disp('++++++++++++++++++++++++++++++')
 
 disp(' ')
-disp('--- ���A�v�m�t�������̑Ώ̉� P ---------')
+disp('--- リアプノフ方程式の対称解 P ---------')
 Q = Qo'*Qo
 P = lyap(A',Q)
 
-%  P �̌ŗL�l�����ׂĐ��ł��邩�ǂ����Ő��萫�𔻕�
+%  P の固有値がすべて正であるかどうかで正定性を判別
 disp(' ')
-disp('--- P �̌ŗL�l ---------')
+disp('--- P の固有値 ---------')
 eig_P = eig(P)
 
 if eig_P > 0
-    disp('(a) P �̌ŗL�l�͂��ׂĐ��ł���CP > 0 �Ȃ̂ŁC�Q�߈���ł���')
+    disp('(a) P の固有値はすべて正であり，P > 0 なので，漸近安定である')
 else
-    disp('(a) P �̌ŗL�l�ɂ͕��̂��̂��܂܂�CP > 0 �ł͂Ȃ��̂ŁC�Q�߈���ł͂Ȃ�')
+    disp('(a) P の固有値には負のものが含まれ，P > 0 ではないので，漸近安定ではない')
 end
 
-% �V���x�X�^�[�̏����ɂ�� P �̐��萫�𔻕�
+% シルベスターの条件により P の正定性を判別
 n = length(A);
 flag = 1;
 for i = 1:n
-    if det(P(1:i,1:i)) < 0  % ������s�񎮂̕����̃`�F�b�N
+    if det(P(1:i,1:i)) < 0  % 主座小行列式の符号のチェック
         flag = 0;
         break
     end
@@ -60,11 +60,11 @@ end
 
 disp(' ')
 if flag == 1
-    disp('(b) �V���x�X�^�[�̏������ P > 0 �Ȃ̂ŁC�Q�߈���ł���')
+    disp('(b) シルベスターの条件より P > 0 なので，漸近安定である')
     for i = 1:n
-        fprintf('������s�񎮁Fi = %d\n',i)
+        fprintf('主座小行列式：i = %d\n',i)
         det(P(1:i,1:i))
     end
 else
-    disp('(b) �V���x�X�^�[�̏������ P > 0 �ł͂Ȃ��̂ŁC�Q�߈���ł͂Ȃ�')
+    disp('(b) シルベスターの条件より P > 0 ではないので，漸近安定ではない')
 end

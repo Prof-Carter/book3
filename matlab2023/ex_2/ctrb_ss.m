@@ -1,8 +1,8 @@
 function [Ac,bc,cc] = ctrb_ss(num_P,den_P)
-% �`�B�֐��\�������ԋ�ԕ\���i����W���`�j�ւ̕ϊ�
+% 伝達関数表現から状態空間表現（可制御標準形）への変換
 
 disp(' ')
-disp('--- ��ԋ�ԕ\���i����W���`�j     ------')
+disp('--- 状態空間表現（可制御標準形）     ------')
 disp('--- dxc(t)/dt = Ac*xc(t) + bc*u(t) ------')
 disp('---   y(t)    = cc*xc(t)           ------')
 
