@@ -5,7 +5,8 @@ disp('++++++++++++++++++++++++++++++')
 
 clear
 format compact
-syms p11 p12 p22 q1
+syms p11 p12 p22 real
+syms q1 positive
 
 A = [  0   1
      -10  -1 ];
