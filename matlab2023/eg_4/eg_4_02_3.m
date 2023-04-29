@@ -5,7 +5,7 @@ disp('++++++++++++++++++++++++++++++')
 clear
 format compact
 
-syms R1 C1 R2 C2
+syms R1 C1 R2 C2 positive
 
 disp(' ')
 disp('--- A, B ------')
