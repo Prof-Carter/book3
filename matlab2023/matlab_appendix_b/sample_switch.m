@@ -1,10 +1,10 @@
 for i = -1:0.5:1
   switch sign(i)
     case -1
-      fprintf('i = %fF•‰‚Ì”\n', i);
+      fprintf('i = %fï¼šè² ã®æ•°\n', i);
     case 1
-      fprintf('i = %fF³‚Ì”\n', i);
+      fprintf('i = %fï¼šæ­£ã®æ•°\n', i);
     otherwise
-      fprintf('i = %fF—ë\n', i);
+      fprintf('i = %fï¼šé›¶\n', i);
     end
 end

@@ -24,11 +24,11 @@ for i = 1:num
   lambda = double(eig(P))
   
   if real(lambda) > 0 & imag(lambda) == 0
-    disp('   ====> P ‚Í³’ès—ñ');
+    disp('   ====> P ã¯æ­£å®šè¡Œåˆ—');
     K = - inv(R)*B'*P;
     K = double(K)
   else
-    disp('   ====> P ‚Í³’ès—ñ‚Å‚Í‚È‚¢');
+    disp('   ====> P ã¯æ­£å®šè¡Œåˆ—ã§ã¯ãªã„');
   end
   disp(' ');
 end

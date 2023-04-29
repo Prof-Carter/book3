@@ -3,7 +3,7 @@ k = input('k = ?\n');
 for i = 0:0.1:1
   fprintf('i = %f\n', i); 
   if i > k
-    fprintf('ƒ‹[ƒv‚©‚ç’EoFk = %f\n', k); 
+    fprintf('ãƒ«ãƒ¼ãƒ—ã‹ã‚‰è„±å‡ºï¼šk = %f\n', k); 
     break;     
   end
 end

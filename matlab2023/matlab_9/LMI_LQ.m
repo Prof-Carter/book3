@@ -14,17 +14,17 @@ X = sdpvar(n,n,'sy');
 F = sdpvar(p,n,'f');
 Z = sdpvar(n,n,'sy');
 % ----------
-M = A*X + B*F;  ep = 1e-5;  % ep ‚ð‰Á•M
+M = A*X + B*F;  ep = 1e-5;  % ep ã‚’åŠ ç­†
 LMI = [];
 % ----------
 Qh = diag([sqrt(10) 0]);  R  = 1;
 M_LQ1 = [-(M+M')    X*Qh        F'*R
           Qh*X     eye(n)    zeros(n,p)
            R*F   zeros(p,n)      R     ];
-LMI = [LMI, M_LQ1 >= ep*eye(length(M_LQ1))];    % C³FM_LQ1 † ep*I (> 0)
+LMI = [LMI, M_LQ1 >= ep*eye(length(M_LQ1))];    % ä¿®æ­£ï¼šM_LQ1 â‰§ ep*I (> 0)
 M_LQ2 = [   Z     eye(n)
           eye(n)    X   ];
-LMI = [LMI, M_LQ2 >= ep*eye(length(M_LQ2))];    % C³FM_LQ2 † ep*I (> 0)
+LMI = [LMI, M_LQ2 >= ep*eye(length(M_LQ2))];    % ä¿®æ­£ï¼šM_LQ2 â‰§ ep*I (> 0)
 % ----------
 options = sdpsettings('solver','sedumi');
 solvesdp(LMI,trace(Z),options) 

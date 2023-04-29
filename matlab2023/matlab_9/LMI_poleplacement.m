@@ -13,13 +13,13 @@ n = 2;  p = 1;
 X = sdpvar(n,n,'sy');
 F = sdpvar(p,n,'f');
 % ----------
-M = A*X + B*F;  ep = 1e-5;  % ep ‚ð‰Á•M
+M = A*X + B*F;  ep = 1e-5;  % ep ã‚’åŠ ç­†
 LMI = [];
 % ----------
 qc = -5;  rc =  4;
 M_D3 = [qc*(M+M')+(rc^2-qc^2)*X  M
                   M'             X ];
-LMI = [LMI, M_D3 >= ep*eye(length(M_D3))];      % C³FM_D3 † ep*I (> 0)
+LMI = [LMI, M_D3 >= ep*eye(length(M_D3))];      % ä¿®æ­£ï¼šM_D3 â‰§ ep*I (> 0)
 % ----------
 options = sdpsettings('solver','sedumi');
 solvesdp(LMI,[],options) 
