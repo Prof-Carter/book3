@@ -9,4 +9,4 @@ g  = 9.81;                      % 重力加速度
 dx = zeros(2,1);    % a column vector
 
 dx(1) = x(2);
-dx(2) = -M*g*l/J*sin(x(1)) - mu/J*x(2);
+dx(2) = - M*g*l/J*sin(x(1)) - mu/J*x(2);
