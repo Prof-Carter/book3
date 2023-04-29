@@ -6,7 +6,7 @@ clear
 format compact
 
 syms x1 x2 dx1 dx2 real
-syms J mu M g l
+syms J mu M g l positive
 
 x = [ x1
       x2 ];
