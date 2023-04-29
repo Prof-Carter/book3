@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 2.5')
+disp('ä¾‹ 2.5')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -9,7 +9,7 @@ syms L R C positive
 
 disp(' ')
 disp('________________________________________________________________')
-disp('x(t) = [vC(t) dvC(t)/dt]'' ‚Ì‚Æ‚«')
+disp('x(t) = [vC(t) dvC(t)/dt]'' ã®ã¨ã')
 
 syms u i di int_i real
 syms x1 x2 dx2 real
@@ -17,7 +17,7 @@ syms x1 x2 dx2 real
 dx1 = x2;
 
 disp(' ')
-disp('--- ‰ñ˜H•û’ö® ------')
+disp('--- å›è·¯æ–¹ç¨‹å¼ ------')
 eq = u == L*di + R*i + (1/C)*int_i
 
 eq = subs(eq,int_i,C*x1);
@@ -48,7 +48,7 @@ c = [ diff( y,x1) diff( y,x2) ]
 
 disp(' ')
 disp('________________________________________________________________')
-disp('xb(t) = [q(t) dq(t)/dt]'' ‚Ì‚Æ‚«')
+disp('xb(t) = [q(t) dq(t)/dt]'' ã®ã¨ã')
 
 syms u q dq ddq  
 syms xb1 xb2 dxb2 real
@@ -56,7 +56,7 @@ syms xb1 xb2 dxb2 real
 dxb1 = xb2;
 
 disp(' ')
-disp('--- ‰ñ˜H•û’ö® ------')
+disp('--- å›è·¯æ–¹ç¨‹å¼ ------')
 eq2 = u - (L*ddq + R*dq + (1/C)*q)
 
 eq2 = subs(eq2,  q, xb1);
@@ -86,7 +86,7 @@ cb = [ diff(  y,xb1) diff(  y,xb2) ]
 
 disp(' ')
 disp('________________________________________________________________')
-disp('“¯’l•ÏŠ· xb(t) = T*x(t)')
+disp('åŒå€¤å¤‰æ› xb(t) = T*x(t)')
 xb = [ q
       dq ];
 
@@ -94,7 +94,7 @@ xb = subs(xb,{q,dq},{int_i,i});
 xb = subs(xb,{int_i,i},{C*x1,C*x2});
 
 disp(' ')
-disp('--- •ÏŠ·s—ñ T ------')
+disp('--- å¤‰æ›è¡Œåˆ— T ------')
 T = [ diff(xb,x1) diff(xb,x2) ]
 
 disp(' ')

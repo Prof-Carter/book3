@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 3.10')
+disp('ä¾‹ 3.10')
 disp('++++++++++++++++++++++++++++++')
 
 close all
@@ -25,7 +25,7 @@ plot(t,maru2,'LineWidth',1.5)
 
 subplot(2,3,3)
 plot(t,maru1+maru2,t,maru2,'--','LineWidth',1.5)
-legend('‡B = ‡@+‡A','‡A')
+legend('â‘¢ = â‘ +â‘¡','â‘¡')
 set(legend,'FontName','MS UI Gotic','FontSize',14)
 
 subplot(2,3,4)
@@ -36,7 +36,7 @@ plot(t,maru5,'LineWidth',1.5)
 
 subplot(2,3,6)
 plot(t,maru4+maru5,t,maru5,'--','LineWidth',1.5)
-legend('‡E = ‡B+‡C','‡D')
+legend('â‘¥ = â‘¢+â‘£','â‘¤')
 set(legend,'FontName','MS UI Gotic','FontSize',14)
 
 
@@ -68,22 +68,22 @@ for i=1:6
 end
 
 subplot(2,3,1)
-ylabel('‡@','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘ ','FontName','MS UI Gotic','FontSize',16)
 
 subplot(2,3,2)
-ylabel('‡A','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘¡','FontName','MS UI Gotic','FontSize',16)
 
 subplot(2,3,3)
-ylabel('‡B, ‡A','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘¢, â‘¡','FontName','MS UI Gotic','FontSize',16)
 
 subplot(2,3,4)
-ylabel('‡C','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘£','FontName','MS UI Gotic','FontSize',16)
 
 subplot(2,3,5)
-ylabel('‡D','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘¤','FontName','MS UI Gotic','FontSize',16)
 
 subplot(2,3,6)
-ylabel('‡E, ‡D','FontName','MS UI Gotic','FontSize',16)
+ylabel('â‘¥, â‘¤','FontName','MS UI Gotic','FontSize',16)
 
 movegui('northwest')
 

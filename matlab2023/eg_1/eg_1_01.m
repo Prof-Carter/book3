@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 1.1')
+disp('ä¾‹ 1.1')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -10,12 +10,12 @@ syms z1 y u real
 syms M1 M2 k mu positive
 
 disp(' ')
-disp('--- ‰^“®•û’ö®‚Ìƒ‰ƒvƒ‰ƒX•ÏŠ· ------')
+disp('--- é‹å‹•æ–¹ç¨‹å¼ã®ãƒ©ãƒ—ãƒ©ã‚¹å¤‰æ› ------')
 eq1 = M1*s^2*z1 == u - k*(z1 - y) - mu*(s*z1 - s*y)
 eq2 = M2*s^2*y  ==     k*(z1 - y) + mu*(s*z1 - s*y)
 
 disp(' ')
-disp('--- eq2 = 0 ‚Ì‰ğ z1(s) ------')
+disp('--- eq2 = 0 ã®è§£ z1(s) ------')
 sol_z1 = solve(eq2,z1)
 
 disp(' ')
@@ -23,17 +23,17 @@ disp('--- z1(s) = Q(s)*y(s) ------')
 Qs = collect(sol_z1/y)
 
 disp(' ')
-disp('--- z1(s) = Q(s)*y(s) ‚ğ eq1 ‚Ö‘ã“ü ------')
+disp('--- z1(s) = Q(s)*y(s) ã‚’ eq1 ã¸ä»£å…¥ ------')
 eq1 = subs(eq1,z1,sol_z1);
 eq1 = simplify(eq1)
 
 disp(' ')
-disp('--- “`’BŠÖ”•\Œ» P(s) = y(s)/u(s) ------')
+disp('--- ä¼é”é–¢æ•°è¡¨ç¾ P(s) = y(s)/u(s) ------')
 y  = solve(eq1,y);
 Ps = collect(y/u,s)
 
 disp(' ')
-disp('--- M1 = 0.5, M2 = 1, k = 2, mu = 1 ‚Ì‚Æ‚«‚Ì P(s) ------')
+disp('--- M1 = 0.5, M2 = 1, k = 2, mu = 1 ã®ã¨ãã® P(s) ------')
 
 Ps = subs(Ps,{M1,M2,k,mu},{0.5,1,2,1});
 Ps = collect(Ps)
