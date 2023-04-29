@@ -1,5 +1,5 @@
 disp('++++++++++++++++++++++++++++++')
-disp('—á 2.3')
+disp('ä¾‹ 2.3')
 disp('++++++++++++++++++++++++++++++')
 
 clear
@@ -12,7 +12,7 @@ syms x1 x2 dx2 real
 dx1 = x2;
 
 disp(' ')
-disp('--- ‰^“®•û’ö® ------')
+disp('--- é‹å‹•æ–¹ç¨‹å¼ ------')
 eq = J*ddy == u - mu*dy    % J*ddy = u - mu*dy
 eq = subs(eq,  y, x1);
 eq = subs(eq, dy, x2);
