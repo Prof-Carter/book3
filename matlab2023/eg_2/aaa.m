@@ -1,7 +1,4 @@
 
-disp('--- “`’BŠÖ”•\Œ»‚Ö‚Ì•ÏŠ· ------')
-Ps_min = c_min*inv(s*eye(1) - A_min)*b_min;
-Ps_min = collect(Ps_min)
 
 disp('++++++++++++++++++++++++++++++')
 disp('—á 2.1, 2.2')
