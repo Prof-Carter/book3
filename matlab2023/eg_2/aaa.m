@@ -1,17 +1,4 @@
 
-
-disp(' ')
-disp('--- 伝達関数表現への変換 ------')
-Ps = c*inv(s*eye(2) - A)*b;
-Ps = collect(Ps)
-
-disp(' ')
-disp('--- 最小実現の状態空間表現（1 次システム） ------')
-A_min = - mu/J
-b_min =    1/J
-c_min =    1
-
-disp(' ')
 disp('--- 伝達関数表現への変換 ------')
 Ps_min = c_min*inv(s*eye(1) - A_min)*b_min;
 Ps_min = collect(Ps_min)
