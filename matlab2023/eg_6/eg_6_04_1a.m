@@ -5,7 +5,8 @@ disp('++++++++++++++++++++++++++++++')
 clear
 format compact
 
-syms l1 l2 s
+syms l1 l2 real
+syms s
 
 A = [ 0   1
       0 -10 ];
