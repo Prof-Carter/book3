@@ -38,7 +38,7 @@ lambda_lower
 syms s
 syms v1_11 v1_12 v1_21 v1_22
 syms v2_11 v2_12 v2_21 v2_22
-syms a b
+syms a b real
 
 
 disp(' ')
