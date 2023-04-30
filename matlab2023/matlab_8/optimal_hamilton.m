@@ -20,8 +20,8 @@ num = 0;
 for i = 1:2*n
   if real(Lambda(i,i)) < 0
     num = num + 1;
-    V1(1:n,num) = V(  1:n,  i);
-    V2(1:n,num) = V(n+1:2*n,i);
+    V1(1:n,num) = V(  1:n,  i); 
+    V2(1:n,num) = V(n+1:2*n,i); 
   end
 end
 
