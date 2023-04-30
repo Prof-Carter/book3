@@ -26,10 +26,10 @@ grid;
 
 % --- グラフのカスタマイズ --------------------------------
 xlim([0 4]);
-ylim([-1 0.5]);
+% ylim([-1 0.5]);
  
 set(gca,'XTick',[0:1:4]);
-set(gca,'YTick',[-1:0.5:0.5]);
+% set(gca,'YTick',[-1:0.5:0.5]);
  
 set(gca,'FontName','Times New Roman','FontSize',20);
 

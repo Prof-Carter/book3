@@ -8,8 +8,8 @@ sim('simulink_lyapunov_R2018a')
 % sim('simulink_lyapunov_R2020a')
 % sim('simulink_lyapunov_R2023a')
 
-% plot_data_lyap
-plot_data_lyap_custom
+plot_data_lyap
+% plot_data_lyap_custom
 
 figure(1)
 movegui('northwest')
